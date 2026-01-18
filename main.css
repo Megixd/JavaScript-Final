@@ -267,4 +267,66 @@ html {
 
 /* about section start */
 /* footer start */
+.footer {
+  background-color: #151515;
+  padding-top: 50px;
+}
+.footer__upper-part, .footer__bottom-part {
+  max-width: 800px;
+  margin: 0 auto;
+}
+.footer__list {
+  list-style: none;
+  line-height: 30px;
+}
+.footer__link {
+  text-decoration: none;
+  color: white;
+}
+.footer__bottom-part {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+.footer__txt {
+  color: white;
+  margin: 40px 0;
+}
+.footer__label {
+  color: #757575;
+  display: block;
+  margin-bottom: 20px;
+}
+.footer__toggle {
+  gap: 30px;
+  align-items: center;
+  width: 100%;
+}
+.footer__input {
+  background-color: #151515;
+  border: none;
+  border-bottom: 1px solid white;
+  padding: 10px 0;
+  width: 70%;
+}
+.footer__button {
+  background: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 40px;
+  font-size: 18px;
+  width: 30%;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.footer__button:hover {
+  background-color: #151515;
+  color: white;
+  border: 1px solid white;
+}
+.footer__copyright {
+  background-color: #757575;
+  text-align: center;
+  padding: 10px;
+}
+
 /* footer end *//*# sourceMappingURL=main.css.map */
