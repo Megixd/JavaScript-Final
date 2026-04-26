@@ -41,7 +41,7 @@ html {
 .header {
   width: 100%;
   background-color: #ffffff;
-  padding: 30px 70px 30px 50px; 
+  padding: 30px 70px 20px 50px; 
   position: sticky;
   top: 0;
   left: 0;
@@ -177,9 +177,82 @@ html {
 
   position: fixed;
   top: 50%;
-  right: 2%;
+  left: 2%;
 }
 /* sidebar end */
+
+/* hero section start */
+.hero {
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.2)), url("../images/hero-img.avif");
+  filter: contrast(1.1) brightness(0.9);
+  height: 80vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  &__overlay{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  &__title{
+    color: whitesmoke;
+    font-size: 80px;
+    margin-bottom: 30px;
+    letter-spacing: 3px;
+  }
+  &__paragraph{
+    font-size: 30px;
+    margin-bottom: 60px;
+    color: whitesmoke;
+  }
+  &__button {
+    text-decoration: none;
+    padding: 15px 30px;
+    background: transparent;
+    color: white;
+    border: solid 1px white;
+    border-radius: 25px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+
+    &:hover{
+      background-color: black;
+      opacity: 0.8;
+      border-color: black;
+    }
+  }
+}
+/* hero section end */
+
+/* carousel section start */
+.carousel {
+  &__headline{
+    font-size: 40px;
+    margin-bottom: 30px;
+    text-align: center;
+  }
+  &__group{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  &__card {
+    
+  }
+}
+
+/* carousel section end */
+
+
 
 /* main content start */
 .main-content {
@@ -263,8 +336,8 @@ html {
 
     &:hover {
       opacity: 1;
-      text-decoration: underline;
       background-color: black;
+      color: white;
     }
   }
 }

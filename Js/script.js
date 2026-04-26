@@ -35,3 +35,33 @@ async function createCard() {
  }
 
 createCard()
+
+
+async function carouselImg() {
+  try {
+    const response = await fetch("https://dummyjson.com/products?limit=100")
+
+  const data = await response.json()
+
+    const filteredProducts = data.products.filter(product => product.category !== 'groceries' && product.category !== "kitchen-accessories" && product.category !== "furniture" && product.category !== "home-decoration")
+
+    const cardProducts = filteredProducts.slice(0,8)
+
+    const carouselContainer = document.querySelector(".carousel__group")
+
+    cardProducts.forEach(carousel => {
+      const carouselImage = document.createElement("div")
+      carouselImage.classList.add("carousel__card")
+
+      carouselImage.innerHTML = `
+       <img src="${carousel.images[0]}" alt="${carousel.title}">
+      `
+
+      carouselContainer.appendChild(carouselImage)
+    });
+  } catch(error) {
+    console.error("something went wrong")
+  }
+}
+
+carouselImg()
