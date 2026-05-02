@@ -213,3 +213,24 @@ async function addProductPage() {
 }
 
 addProductPage()
+
+/* FAQ page */
+const faqButtons = document.querySelectorAll(".product-page__button");
+const faqTexts = document.querySelectorAll(".product-page__description-text");
+
+
+faqButtons.forEach((btn, i) => {
+  faqTexts[i].style.display = "none";
+
+  btn.addEventListener("click", () => {
+    const text = faqTexts[i];
+
+    if (text.style.display === "none" || text.style.display === "") {
+      text.style.display = "block";
+      btn.textContent = "-";
+    } else {
+      text.style.display = "none";
+      btn.textContent = "+";
+    }
+  });
+});

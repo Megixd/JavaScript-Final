@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CORE - Contact</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="icon" href="Images/favicon.png">
+  <link rel="stylesheet" href="main.css">
+</head>
+<body>
+  <header class="header">
+    <div class="container">
+      <div class="row space-between">
+
+        <div class="header__title">
+          <a class="header__link" href="index.html">
+            <h1 class="header__heading">CORE</h1>
+            <p class="header__subtitle">The Essentials Curated</p>
+          </a>
+        </div>
+
+        <nav class="header__nav">
+          <ul class="header__menu row">
+            <li class="header__menu-item"><a class="header__link" href="index.html">Home</a></li>
+            <li class="header__menu-item"><a class="header__link" href="index.html#about">About</a></li>
+            <li class="header__menu-item"><a class="header__link" href="shop.html">Shop</a></li>
+            <li class="header__menu-item"><a class="header__link" href="FAQ.html">FAQ</a></li>
+            <li class="header__menu-item"><a class="header__link" href="#"><span>Contact</span></a></li>
+          </ul>
+        </nav>
+
+        <div class="header__actions row">
+          <div class="search row">
+            <i class="fa-solid fa-magnifying-glass search__icon"></i>
+            <input class="search__input" type="search" placeholder="Search">
+          </div>
+
+          <div class="login">
+            <a class="login__button row" href="#">
+              <i class="fa-solid fa-circle-user login__icon"></i>
+              <span class="login__txt">Log In</span>
+            </a>
+          </div>
+
+          <div class="cart">
+            <button class="cart__toggle">
+              <i class="fa-solid fa-bag-shopping cart__icon"></i>
+              <span class="cart__count">0</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <aside>
+    <div class="sidebar column">
+      <a class="sidebar__item" href="https://www.facebook.com/wix"><i class="fa-brands fa-facebook-f"></i></a>
+      <a class="sidebar__item" href="https://www.instagram.com/wix"><i class="fa-brands fa-instagram"></i></a>
+      <a class="sidebar__item" href="https://www.pinterest.com/wix"><i class="fa-brands fa-pinterest-p"></i></a>
+    </div>
+  </aside>
+
+  <main>
+     <section class="hero__contact">
+      <div class="container">
+        <div class="hero__overlay">
+          <div class="hero__content">
+            <h1 class="hero__title">We're here to help</h1>
+            <p class="hero__paragraph">Reach out to us and we’ll get back to you as soon as possible.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    
+  <section class="contact">
+    <div class="container">
+        
+      <h1 class="contact__title">Contact Us</h1>
+
+      <form class="contact__form">
+        <div class="contact__row">
+          <div class="contact__group">
+            <label class="contact__label">First name *</label>
+            <input type="text" class="contact__input" placeholder="Enter your first name">
+          </div>
+          <div class="contact__group">
+            <label class="contact__label">Last name *</label>
+            <input type="text" class="contact__input" placeholder="Enter your last name">
+          </div>
+        </div>
+
+        <div class="contact__row">
+          <div class="contact__group">
+            <label class="contact__label">Address</label>
+            <input type="text" class="contact__input" placeholder="Enter your address">
+          </div>
+          <div class="contact__group">
+            <label class="contact__label">Email *</label>
+            <input type="email" class="contact__input" placeholder="Enter your email">
+          </div>
+        </div>
+
+        <div class="contact__group">
+          <label class="contact__label">Phone</label>
+          <div class="contact__phone-wrapper">
+            <span class="contact__icon"><i class="fa-solid fa-globe"></i></span>
+            <input type="tel" class="contact__input contact__input--phone">
+          </div>
+        </div>
+
+        <div class="contact__group">
+          <label class="contact__label">Message</label>
+          <textarea class="contact__input contact__input--textarea"></textarea>
+        </div>
+
+        <button type="submit" class="contact__button">Submit</button>
+      </form>
+
+      <div class="contact__wrapper">
+        <div class="contact__map">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2978.123!2d44.80!3d41.72!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDHCsDQzJzEyLjAiTiA0NMKwNDgnMDAuMCJF!5e0!3m2!1sen!2sge!4v1620000000000" width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+
+        <div class="contact__details">
+          <p><i class="fa-solid fa-location-dot"></i> 123 Street Name, Tbilisi, Georgia</p>
+          <p><i class="fa-solid fa-envelope"></i> core@yourstore.com</p>
+        </div>
+      </div>
+     </div>
+    </section>
+  </main>  
+
+ <footer class="footer">
+    <div class="footer__upper-part row space-between">
+      <div class="footer__section">
+        <ul class="footer__list">
+          <li><a class="footer__link" href="#">Shipping & Returns</a></li>
+          <li><a  class="footer__link" href="#">Store Policy</a></li>
+          <li><a class="footer__link" href="#">Payment Methods</a></li>
+        </ul>
+      </div>
+
+      <div class="footer__section">
+        <ul class="footer__list">
+          <li><a class="footer__link" href="contact.html">Contact</a></li>
+          <li><a class="footer__link" href="tel:123-456-7890">Tel: 123-456-7890</a></li>
+          <li><a class="footer__link" href="mailto:info@mysite.com">info@mysite.com</a></li>
+        </ul>
+      </div>
+
+      <div class="footer__section">
+        <ul class="footer__list">
+          <li><a class="footer__link" href="https://www.facebook.com/wix">Facebook</a></li>
+          <li><a class="footer__link" href="instagram.com/wix">Instagram</a></li>
+          <li><a class="footer__link" href="https://www.pinterest.com/wixcom/">Pinterest</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer__bottom-part">
+      <p class="footer__txt">Join our mailing list and never miss an update</p>
+      <form action="#" class="footer__form">
+        <label class="footer__label" for="email">Email:</label>
+        <div class="footer__toggle row">
+          <input class="footer__input" type="email">
+          <button class="footer__button" type="submit">Subscribe Now</button>
+        </div>
+      </form>
+    </div>
+
+    <div class="footer__copyright">
+      &copy; 2035 by Tote. Powered and secured by <a href="https://www.wix.com/?utm_campaign=vir_created_with">Wix</a>
+    </div>
+  </footer>
+
+  <script src="Js/script.js"></script>
+</body>
+</html>

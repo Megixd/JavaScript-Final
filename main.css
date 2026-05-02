@@ -167,7 +167,7 @@ html {
   z-index: 1000;
   position: fixed;
   top: 50%;
-  left: 2%;
+  right: 2%;
 }
 
 /* sidebar end */
@@ -176,6 +176,32 @@ html {
   background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.2)), url("../images/hero-img.png");
   filter: contrast(1.1) brightness(0.9);
   height: 80vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.hero__FAQ {
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6)), url("../images/customerservivce.jpeg");
+  filter: contrast(1.1) brightness(0.9);
+  height: 40vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.hero__contact {
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6)), url("../images/contact.png");
+  filter: contrast(1.1) brightness(0.9);
+  height: 40vh;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -407,15 +433,25 @@ html {
 .product-page__product-description {
   width: 100%;
 }
+.product-page__product-descriptionfaq {
+  padding: 40px;
+}
 .product-page__product-description-item:nth-child(2) {
   border-top: 1px solid lightgray;
   border-bottom: 1px solid lightgray;
+}
+.product-page__product-description-itemfaq {
+  border-bottom: 1px solid lightgray;
+  padding-top: 25px;
+  padding-bottom: 10px;
 }
 .product-page__product-description-item {
   padding-top: 15px;
 }
 .product-page__description-text {
   display: none;
+  margin-bottom: 10px;
+  padding-top: 15px;
 }
 .product-page__product-description-flex {
   display: flex;
@@ -430,6 +466,7 @@ html {
   background-color: white;
   padding: 5px 9px;
   border: none;
+  cursor: pointer;
 }
 
 /* product page end */
@@ -531,6 +568,86 @@ html {
 }
 
 /* about section start */
+/* contact page start */
+.contact {
+  padding: 80px 50px;
+}
+.contact__title {
+  font-size: 48px;
+  margin-bottom: 50px;
+  font-weight: 400;
+}
+.contact__form {
+  margin-bottom: 60px;
+}
+.contact__row {
+  display: flex;
+  gap: 40px;
+  margin-bottom: 15px;
+}
+.contact__group {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+}
+.contact__label {
+  margin-bottom: 8px;
+}
+.contact__input {
+  border: none;
+  border-bottom: 1px solid #757575;
+  font-size: 16px;
+  padding: 12px 0;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+.contact__input::-moz-placeholder {
+  color: #a0a0a0;
+}
+.contact__input::placeholder {
+  color: #a0a0a0;
+}
+.contact__input--textarea {
+  min-height: 40px;
+}
+.contact__input--phone {
+  border-bottom: none;
+}
+.contact__phone-wrapper {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #757575;
+}
+.contact__icon {
+  margin-right: 12px;
+  font-size: 18px;
+}
+.contact__button {
+  width: 100%;
+  background-color: black;
+  color: #fff;
+  padding: 18px;
+  border: none;
+  font-size: 16px;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+.contact__wrapper {
+  margin-top: 80px;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 40px;
+  align-items: center;
+}
+.contact__details p {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+/* contact page end */
 /* footer start */
 .footer {
   background-color: #151515;
