@@ -183,7 +183,7 @@ html {
 
 /* hero section start */
 .hero {
-  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.2)), url("../images/hero-img.avif");
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.2)), url("../images/hero-img.png");
   filter: contrast(1.1) brightness(0.9);
   height: 80vh;
   background-position: center;
@@ -235,24 +235,217 @@ html {
 
 /* carousel section start */
 .carousel {
+  overflow: hidden;
+  padding: 40px;
   &__headline{
     font-size: 40px;
     margin-bottom: 30px;
     text-align: center;
   }
+  &__wrapper {
+    display: flex;
+  }
   &__group{
     display: flex;
-    align-items: center;
-    justify-content: center;
+    overflow-x: auto;
+    flex-shrink: 0;
+    animation: spin 20s infinite linear;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
   }
   &__card {
-    
+    flex: 0 0 80px;
   }
+  &__images{
+    height: 500px;
+  }
+}
+
+@keyframes spin {
+  from {translate: 0;} to {translate: -100%}
 }
 
 /* carousel section end */
 
+/* instagram section start */
+.instagram {
+  padding: 70px 50px;
+  background-color: black;
+  text-align: center;
+  &__link{
+    color: white;
+    text-decoration: none;
+    font-size: 88px;
+  }
+  &__paragraph{
+    color: white;
+    font-size: 40px;
+    margin-top: 10px;
+  }
+  
+}
+/* instagram section end */
 
+/* testemonials section start  */
+.testimonials {
+  padding: 60px;
+  &__title{
+    font-size: 40px;
+    text-align: center;
+    margin-bottom: 50px;
+  }
+  &__quote-icon {
+    background-color: #F7F6F6;
+    font-weight: bold;
+    font-size: 20px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  &__grid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+  &__card{
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 5px 10px 18px lightgray;
+  }
+  &__img{
+    display: flex;
+    gap: 10px;
+    text-align: left;
+    border-top: 1px solid lightgray;
+    padding: 10px 0px;
+  }
+  &__avatar{
+    height: 50px;
+    border-radius: 50%;
+  }
+  &__text{
+    color: gray; 
+    padding: 25px 5px 15px 5px;   
+  }
+  &__details {
+    margin-top: 6px;
+    line-height: 20px;
+  }
+  &__email {
+    font-size: 13px;
+    color: gray;
+  }
+}
+/* testemonials section end */
+
+/* product page start*/
+
+.product-page{
+  padding: 60px;
+&__container {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}
+&__img{
+  height: 650px;
+}
+&__left{
+  line-height: 30px;
+  padding-top: 40px;
+  width: 40%;
+}
+&__title{
+  margin-bottom: 5px;
+}
+&__SKU,
+&__quantity-label{
+  font-size: 15px;
+  color: gray;
+}
+&__price {
+  font-size: 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+&__quantity-container{
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+&__quantity{
+  font-size: 15px;
+  padding: 10px 6px 10px 20px;
+  width: 100px;
+  margin-bottom: 30px;
+
+  &::placeholder{
+    text-align: center;
+  }
+}
+&__buttons{
+  display: flex;
+  gap: 10px;
+  margin-bottom: 50px;
+}
+&__btn1 {
+  border: none;
+  font-size: 15px;
+  padding: 10px 20px;
+  width: 50%;
+  color: white;
+  background: black;
+  cursor: pointer;
+  transition: 0.3s;
+
+  &:hover{
+   text-decoration: underline;
+  }
+}
+&__btn2{
+  border: none;
+  font-size: 20px;
+  padding: 10px 15px;
+  cursor: pointer;
+  border:1px solid
+ }
+ &__product-description{
+  width: 100%;
+ }
+ &__product-description-item:nth-child(2){
+  border-top: 1px solid lightgray;  
+  border-bottom: 1px solid lightgray;
+ }
+ &__product-description-item{
+  padding-top: 15px;
+ }
+ &__description-text {
+  display: none;
+ }
+ &__product-description-flex{
+  display: flex;
+  justify-content: space-between;
+ }
+ &__h2{
+  font-size: 20px;
+  text-transform: uppercase;
+ }
+ &__button{
+  font-size: 25px;
+  background-color: white;
+  padding: 5px 9px;
+  border: none;
+ }
+}
+
+/* product page end */
 
 /* main content start */
 .main-content {
@@ -284,6 +477,9 @@ html {
     position: relative;
     width: 100%;
     overflow: hidden;
+  }
+  &__link {
+    text-decoration: none;
   }
 
   &__sale-tag {

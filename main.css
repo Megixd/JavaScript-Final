@@ -173,7 +173,7 @@ html {
 /* sidebar end */
 /* hero section start */
 .hero {
-  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.2)), url("../images/hero-img.avif");
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.2)), url("../images/hero-img.png");
   filter: contrast(1.1) brightness(0.9);
   height: 80vh;
   background-position: center;
@@ -221,17 +221,218 @@ html {
 
 /* hero section end */
 /* carousel section start */
+.carousel {
+  overflow: hidden;
+  padding: 40px;
+}
 .carousel__headline {
   font-size: 40px;
   margin-bottom: 30px;
   text-align: center;
 }
+.carousel__wrapper {
+  display: flex;
+}
 .carousel__group {
+  display: flex;
+  overflow-x: auto;
+  flex-shrink: 0;
+  animation: spin 20s infinite linear;
+}
+.carousel__group::-webkit-scrollbar {
+  display: none;
+}
+.carousel__card {
+  flex: 0 0 80px;
+}
+.carousel__images {
+  height: 500px;
+}
+
+@keyframes spin {
+  from {
+    translate: 0;
+  }
+  to {
+    translate: -100%;
+  }
+}
+/* carousel section end */
+/* instagram section start */
+.instagram {
+  padding: 70px 50px;
+  background-color: black;
+  text-align: center;
+}
+.instagram__link {
+  color: white;
+  text-decoration: none;
+  font-size: 88px;
+}
+.instagram__paragraph {
+  color: white;
+  font-size: 40px;
+  margin-top: 10px;
+}
+
+/* instagram section end */
+/* testemonials section start  */
+.testimonials {
+  padding: 60px;
+}
+.testimonials__title {
+  font-size: 40px;
+  text-align: center;
+  margin-bottom: 50px;
+}
+.testimonials__quote-icon {
+  background-color: #F7F6F6;
+  font-weight: bold;
+  font-size: 20px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-/* carousel section end */
+.testimonials__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+.testimonials__card {
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 5px 10px 18px lightgray;
+}
+.testimonials__img {
+  display: flex;
+  gap: 10px;
+  text-align: left;
+  border-top: 1px solid lightgray;
+  padding: 10px 0px;
+}
+.testimonials__avatar {
+  height: 50px;
+  border-radius: 50%;
+}
+.testimonials__text {
+  color: gray;
+  padding: 25px 5px 15px 5px;
+}
+.testimonials__details {
+  margin-top: 6px;
+  line-height: 20px;
+}
+.testimonials__email {
+  font-size: 13px;
+  color: gray;
+}
+
+/* testemonials section end */
+/* product page start*/
+.product-page {
+  padding: 60px;
+}
+.product-page__container {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}
+.product-page__img {
+  height: 650px;
+}
+.product-page__left {
+  line-height: 30px;
+  padding-top: 40px;
+  width: 40%;
+}
+.product-page__title {
+  margin-bottom: 5px;
+}
+.product-page__SKU, .product-page__quantity-label {
+  font-size: 15px;
+  color: gray;
+}
+.product-page__price {
+  font-size: 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.product-page__quantity-container {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.product-page__quantity {
+  font-size: 15px;
+  padding: 10px 6px 10px 20px;
+  width: 100px;
+  margin-bottom: 30px;
+}
+.product-page__quantity::-moz-placeholder {
+  text-align: center;
+}
+.product-page__quantity::placeholder {
+  text-align: center;
+}
+.product-page__buttons {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 50px;
+}
+.product-page__btn1 {
+  border: none;
+  font-size: 15px;
+  padding: 10px 20px;
+  width: 50%;
+  color: white;
+  background: black;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.product-page__btn1:hover {
+  text-decoration: underline;
+}
+.product-page__btn2 {
+  border: none;
+  font-size: 20px;
+  padding: 10px 15px;
+  cursor: pointer;
+  border: 1px solid;
+}
+.product-page__product-description {
+  width: 100%;
+}
+.product-page__product-description-item:nth-child(2) {
+  border-top: 1px solid lightgray;
+  border-bottom: 1px solid lightgray;
+}
+.product-page__product-description-item {
+  padding-top: 15px;
+}
+.product-page__description-text {
+  display: none;
+}
+.product-page__product-description-flex {
+  display: flex;
+  justify-content: space-between;
+}
+.product-page__h2 {
+  font-size: 20px;
+  text-transform: uppercase;
+}
+.product-page__button {
+  font-size: 25px;
+  background-color: white;
+  padding: 5px 9px;
+  border: none;
+}
+
+/* product page end */
 /* main content start */
 .main-content {
   padding: 0px 50px 30px 50px;
@@ -257,6 +458,9 @@ html {
   position: relative;
   width: 100%;
   overflow: hidden;
+}
+.grid__link {
+  text-decoration: none;
 }
 .grid__sale-tag {
   position: absolute;
