@@ -31,9 +31,21 @@
         </nav>
 
         <div class="header__actions row">
+          
           <div class="search row">
             <i class="fa-solid fa-magnifying-glass search__icon"></i>
-            <input class="search__input" type="search" placeholder="Search">
+            <input class="search__input" type="text" placeholder="Search">
+          </div>
+
+          <div class="search-field" style="display: unset;">
+             <div class="search-field__input-container row">
+              <i class="fa-solid fa-magnifying-glass search-field__icon"></i>
+              <input class="search-field__input" type="text" placeholder="Search for Product...">
+              <span class="search-field__close-btn">Close</span>
+             </div>
+             <div class="search-field__p"></div>
+             <div class="search-field__product-grid">
+             </div>
           </div>
 
           <div class="login">
@@ -41,6 +53,51 @@
               <i class="fa-solid fa-circle-user login__icon"></i>
               <span class="login__txt">Log In</span>
             </a>
+          </div>
+
+          <div class="signin-overlay">
+            <span class="signin-overlay__close">X</span>
+            <form class="signin-overlay__form"> 
+              <h1 class="signin-overlay__h1">Log In</h1>
+
+              <div class="signin-overlay__input-container">
+                <label class="signin-overlay__label" for="email">Email</label>
+                <input name="email" id="email" type="email" class="signin-overlay__input">
+              </div>
+
+              <div class="signin-overlay__input-container">
+                <label class="signin-overlay__label" for="password">Password</label>
+                <input name="password" id="password" type="password" class="signin-overlay__input">
+              </div>
+              <div class="signin-overlay__error"></div>
+              <button class="signin-overlay__btn">Sign In</button>
+              <p class="signin-overlay__question">don't have an account?<a href="#"> Sign Up</a></p>
+            </form>
+          </div>
+
+          <div class="signup-overlay">
+            <form class="signup-overlay__form">
+              <span class="signup-overlay__close">X</span>
+              <h1 class="signup-overlay__h1">Create Account</h1>
+
+              <div class="signup-overlay__input-container">
+                <label class="signup-overlay__label">Full Name</label>
+                <input name="fullname" type="text" class="signup-overlay__input" placeholder="Enter your name">
+              </div>
+
+              <div class="signup-overlay__input-container">
+                <label class="signup-overlay__label">Email</label>
+                <input name="email" type="email" class="signup-overlay__input" placeholder="Enter your email">
+              </div>
+
+              <div class="signup-overlay__input-container">
+                <label class="signup-overlay__label">Password</label>
+                <input name="password" type="password" class="signup-overlay__input" placeholder="Create password">
+              </div>
+
+              <button class="signup-overlay__btn" type="submit">Sign Up</button>
+              <p class="signup-overlay__question">Already have an account? <a href="#" id="switch-to-signin"> Log In</a></p>
+            </form>
           </div>
 
           <div class="cart">
@@ -74,28 +131,6 @@
         </div>
       </div>
     </section>
-
-    <!-- <section class="main-content">
-      <div class="container">
-        <div class="grid">
-
-          <div class="grid__card column">
-            <div class="grid__img-box">
-              <img src="Images/bag1.jpg" alt="" class="grid__image grid__image--primary">
-              <img src="Images/1.jpeg" alt="" class="grid__image grid__image--secondary">
-            </div>
-
-            <div class="grid__content column">
-              <p class="grid__title">I'm a product</p>
-              <span class="grid__price">$15.00</span>
-              <button class="grid__button">Add to Cart</button>
-            </div>
-          </div>
-          
-        </div>
-      </div>
-    </section>
- -->
 
   <section class="carousel">
     <div class="container">
@@ -179,6 +214,7 @@
     </div>
   </footer>
 
-  <script src="Js/script.js"></script>
+  <script src="Js/script.js" defer></script>
+  <script src="Js/authorisation.js" defer></script>
 </body>
 </html>

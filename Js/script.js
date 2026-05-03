@@ -65,6 +65,11 @@ async function carouselImg() {
       carouselCard.innerHTML = `
        <img class="carousel__images" src="${product.images[0]}" alt="${product.title}">
       `
+    carouselCard.addEventListener("click", function() {
+      if (product && product.id) {
+        window.location.href = `product.html?id=${product.id}`;
+        }
+    });
 
       group.appendChild(carouselCard)
       })
@@ -234,3 +239,75 @@ faqButtons.forEach((btn, i) => {
     }
   });
 });
+
+
+/* search  */
+
+const searchInput = document.querySelector(".search-field__input")
+const grid = document.querySelector(".search-field__product-grid")
+
+function displayProduct(list) {
+  if (list.length === 0) {
+    grid.innerHTML = `
+    <div style="grid-column: 1 / -1; display: flex; align-items: center; justify-content: center; width: 100%; height: 200px;">
+      Product was not found...
+    </div>
+    `  
+    return
+  }
+    const structure = list.map(item => 
+      `<div class=""search-field__card>
+      <div class="grid__img-box">
+      <a class="grid__link" href="product.html?id=${item.id}">
+          <img src="${item.images[0]}" alt="${item.title}"  class="grid__image grid__image--primary">
+        </a>
+      </div>
+
+      <div class="grid__content column">
+      <a class="grid__link" href="product.html?id=${item.id}">
+        <p class="grid__title">${item.title}</p>
+      </a>
+        <span class="grid__price">${item.price}</span>
+      </div>
+      </div>
+      `).join("");  
+
+      grid.innerHTML = structure;
+  }
+
+  let products = [];
+
+  async function getProducts() {
+    const response = await fetch("https://dummyjson.com/products?limit=100");
+    const data = await response.json();
+
+    const filteredProducts = data.products.filter(product => product.category !== 'groceries' && product.category !== "kitchen-accessories" && product.category !== "furniture" && product.category !== "home-decoration")
+
+    products = filteredProducts; 
+  }
+
+ getProducts();
+
+searchInput.addEventListener("input", (event) => {
+  const term = event.target.value.toLowerCase();
+  const filtered = products.filter(product => product.title.toLowerCase().includes(term) || product.category.toLowerCase().includes(term))
+
+  displayProduct(filtered)
+})
+
+const searchField = document.querySelector(".search-field")
+const closeBtn = document.querySelector(".search-field__close-btn")
+const search = document.querySelector(".search")
+
+closeBtn.addEventListener("click", close)
+search.addEventListener("click", open)
+
+function close() {
+  searchField.style.display = "none"
+}
+
+function open() {
+  searchField.style.visibility = "visible"
+  searchField.style.display = "unset"  
+}
+
