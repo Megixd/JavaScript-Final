@@ -54,11 +54,77 @@
             </a>
           </div>
 
+           <div class="signin-overlay">
+            <span class="signin-overlay__close">X</span>
+            <form class="signin-overlay__form"> 
+              <h1 class="signin-overlay__h1">Log In</h1>
+
+              <div class="signin-overlay__input-container">
+                <label class="signin-overlay__label" for="email">Email</label>
+                <input name="email" id="email" type="email" class="signin-overlay__input">
+              </div>
+
+              <div class="signin-overlay__input-container">
+                <label class="signin-overlay__label" for="password">Password</label>
+                <input name="password" id="password" type="password" class="signin-overlay__input">
+              </div>
+              <div class="signin-overlay__error"></div>
+              <button class="signin-overlay__btn">Sign In</button>
+              <p class="signin-overlay__question">don't have an account?<a href="#"> Sign Up</a></p>
+            </form>
+          </div>
+
+          <div class="signup-overlay">
+            <form class="signup-overlay__form">
+              <span class="signup-overlay__close">X</span>
+              <h1 class="signup-overlay__h1">Create Account</h1>
+
+              <div class="signup-overlay__input-container">
+                <label class="signup-overlay__label">Full Name</label>
+                <input name="fullname" type="text" class="signup-overlay__input" placeholder="Enter your name">
+              </div>
+
+              <div class="signup-overlay__input-container">
+                <label class="signup-overlay__label">Email</label>
+                <input name="email" type="email" class="signup-overlay__input" placeholder="Enter your email">
+              </div>
+
+              <div class="signup-overlay__input-container">
+                <label class="signup-overlay__label">Password</label>
+                <input name="password" type="password" class="signup-overlay__input" placeholder="Create password">
+              </div>
+
+              <button class="signup-overlay__btn" type="submit">Sign Up</button>
+              <p class="signup-overlay__question">Already have an account? <a href="#" id="switch-to-signin"> Log In</a></p>
+            </form>
+          </div>
+
           <div class="cart">
             <button class="cart__toggle">
               <i class="fa-solid fa-bag-shopping cart__icon"></i>
               <span class="cart__count">0</span>
             </button>
+          </div>
+
+           <div class="cart-overlay">
+            <div class="cart-window">
+              <div class="cart-window__header">
+              <h2>Shopping Bag</h2>
+              <span class="cart-window__close">X</span>
+            </div>
+              
+              <div class="cart-window__content">
+                <p class="cart-window__empty">Your bag is empty</p>
+              </div>
+
+              <div class="cart-window__footer">
+                <div class="cart-window__total">
+                  <span id="cart-total-price">Total:</span>
+                  <span class="cart__count">$0.00</span>
+                </div>
+                <button class="cart-window__checkout">Checkout</button>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -132,6 +198,8 @@
           <p class="product-page__description-text">You can edit the title from the FAQ 'Settings' tab in the Editor. To remove the title from your mobile app go to the 'Site & App' tab in your Owner's app and customize.
           </p>
         </div> 
+
+
     </div>
   </div>
 </main>
@@ -181,5 +249,6 @@
 
   <script src="Js/script.js"></script>
   <script src="Js/authorisation.js"></script>
+  <script src="Js/cart.js"></script>
 </body>
 </html>

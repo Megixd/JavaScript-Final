@@ -27,7 +27,11 @@ async function createCard() {
         <p class="grid__title">${card.title}</p>
       </a>
         <span class="grid__price">${card.price}</span>
-        <button class="grid__button">Add to Cart</button>
+        <button class="grid__button"
+        <button class="grid__button" 
+        data-name="${card.title}" 
+        data-price="${card.price}" 
+        data-image="${card.images[0]}">Add to Cart</button>
       </div>
       `
       gridContainer.appendChild(productCard)
@@ -67,13 +71,13 @@ async function carouselImg() {
       `
     carouselCard.addEventListener("click", function() {
       if (product && product.id) {
-        window.location.href = `product.html?id=${product.id}`;
+        window.location.href = `product.html?id=${product.id}`
         }
-    });
+    })
 
       group.appendChild(carouselCard)
       })
-    });
+    })
 
   } catch(error) {
     console.error("something went wrong")
@@ -157,8 +161,10 @@ async function addProductPage() {
         </div>
 
         <div class="product-page__buttons">
-          <button class="product-page__btn1">Add to Cart</button>
-          <button class="product-page__btn2"><i class="fa-regular fa-heart"></i></button>
+        <button class="product-page__btn1" 
+          data-name="${data.title}" 
+          data-price="${data.price}" 
+          data-image="${data.images[0]}"> Add to Cart </button>
         </div>
 
         <div class="product-page__product-description"> 
@@ -220,26 +226,25 @@ async function addProductPage() {
 addProductPage()
 
 /* FAQ page */
-const faqButtons = document.querySelectorAll(".product-page__button");
-const faqTexts = document.querySelectorAll(".product-page__description-text");
+const faqButtons = document.querySelectorAll(".product-page__button")
+const faqTexts = document.querySelectorAll(".product-page__description-text")
 
 
 faqButtons.forEach((btn, i) => {
-  faqTexts[i].style.display = "none";
+  faqTexts[i].style.display = "none"
 
   btn.addEventListener("click", () => {
-    const text = faqTexts[i];
+    const text = faqTexts[i]
 
     if (text.style.display === "none" || text.style.display === "") {
-      text.style.display = "block";
-      btn.textContent = "-";
+      text.style.display = "block"
+      btn.textContent = "-"
     } else {
-      text.style.display = "none";
-      btn.textContent = "+";
+      text.style.display = "none"
+      btn.textContent = "+"
     }
-  });
-});
-
+  })
+})
 
 /* search  */
 
@@ -270,26 +275,26 @@ function displayProduct(list) {
         <span class="grid__price">${item.price}</span>
       </div>
       </div>
-      `).join("");  
+      `).join("")
 
-      grid.innerHTML = structure;
+      grid.innerHTML = structure
   }
 
-  let products = [];
+  let products = []
 
   async function getProducts() {
-    const response = await fetch("https://dummyjson.com/products?limit=100");
-    const data = await response.json();
+    const response = await fetch("https://dummyjson.com/products?limit=100")
+    const data = await response.json()
 
     const filteredProducts = data.products.filter(product => product.category !== 'groceries' && product.category !== "kitchen-accessories" && product.category !== "furniture" && product.category !== "home-decoration")
 
-    products = filteredProducts; 
+    products = filteredProducts
   }
 
- getProducts();
+ getProducts()
 
 searchInput.addEventListener("input", (event) => {
-  const term = event.target.value.toLowerCase();
+  const term = event.target.value.toLowerCase()
   const filtered = products.filter(product => product.title.toLowerCase().includes(term) || product.category.toLowerCase().includes(term))
 
   displayProduct(filtered)
